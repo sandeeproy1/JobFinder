@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompanyList>
+	<Company>
+		<CompanyName>LAW DEPARTMENT</CompanyName>
+		<Website>www.lawdepartment.ny</Website>
+		<HeadQuarters>New York</HeadQuarters>
+	</Company>
+	<Company>
+		<CompanyName>MANHATTAN COMMUNITY BOARD #8</CompanyName>
+		<Website>www.manhattancommunityboard.org</Website>
+		<HeadQuarters>Manhattan</HeadQuarters>
+	
+		
+		
+		
+	</Company>
+<Company>
+	<HeadQuarters>NYC</HeadQuarters>
+	<CompanyName>Cognizant</CompanyName>
+	<Website>www.cognizant.com</Website>
+	</Company>
+	</CompanyList>

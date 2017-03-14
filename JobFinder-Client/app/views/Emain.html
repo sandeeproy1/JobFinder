@@ -1,0 +1,105 @@
+
+
+<header id="header">
+  <div id="head">
+    <h1 id="logo" class="text-center">
+      <span class="title"> {{ }} recruiter1@gmail.com </span>
+			<span class="tagline"> {{ }}  <button class="btn-danger" href="#/login"> <a href="/#/login"> signout </a></button>  <br>
+				<a href="">{{ }}</a></span>
+    </h1>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+
+      <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="profile.html">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="sidebar-left.html">Left Sidebar</a></li>
+              <li><a href="sidebar-right.html">Right Sidebar</a></li>
+              <li><a href="single.html">Blog Post</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</header>
+
+
+<main id="main">
+
+  <div class="container">
+
+    <div class="row topspace">
+
+      <!-- Sidebar -->
+      <ng-include src="'../views/Template/employerLeft.html'"> </ng-include>
+      <!-- /Sidebar -->
+
+      <!-- job listing and button-detail + button showList
+   $scope.showList=false;
+        $scope.showDetails=false;
+        $scope.showCandidateList=false;
+        $scope.showCandidateprofile=true;
+      -->
+      <article class="col-sm-8 col-md-8  col-lg-8 maincontent side2" ng-show="showList">
+
+          <div ng-repeat="x in PostedJobs">
+
+            <div class="col-sm-8 col-md-8 col-lg-8 ngRow">
+              JOB-ID :{{x.JobId}}  TITLE: {{x.JobTitle}} | <button ng-click="fun1($index)"> Show Details</button> | <button ng-click="showCandidates($index)"> List </button>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- displaying user ID and candidate name-->
+
+      <article class="col-sm-8 col-md-8  col-lg-8 maincontent side2" ng-show="showCandidateList">
+
+        <div ng-repeat="candidate in candidates">
+
+          <div class="col-sm-8 col-md-8 col-lg-8 ngRow">
+             Id: {{candidate.userid}} | name :{{candidate.fname}}  <button ng-click="showCandidateProfile(candidate.userid)"> Show profile</button>
+          </div>
+
+        </div>
+      </article>
+      <!-- -->
+      <!--  showing candidate profile-->
+      <article class="col-sm-8 col-md-8  col-lg-8 maincontent side2" ng-show="showCandidateprofile">
+
+        <div ng-repeat="deatils in profileDisplay">
+          {{deatils}}
+        </div>
+
+      </article>
+
+      <!-- showing posted Job Details  -->
+      <article class="col-sm-8 col-md-8  col-lg-8 maincontent side2" ng-show="showDetails">
+
+        <div ng-repeat="deatils in jobDescArray">
+          {{deatils}}
+        </div>
+      </article>
+      <!-- -->
+      <button> Go- Back </button>
+
+    </div>
+
+  </div>	<!-- /container -->
+</main>
+

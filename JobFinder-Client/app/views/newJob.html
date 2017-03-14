@@ -1,0 +1,39 @@
+<ng-include src="'../views/Template/employerHeader.html'"> </ng-include>
+<main id="main">
+
+  <div class="container">
+
+    <div class="row topspace">
+
+      <!-- Sidebar -->
+      <ng-include src="'../views/Template/employerLeft.html'"> </ng-include>
+      <!-- /Sidebar -->
+
+
+      <article class="col-sm-8 col-md-8  col-lg-8 maincontent side2">
+
+<form novalidate class="simple-form">
+  <pre>
+  JobId:               <input type="text" ng-model="user.jobId" /><br/>
+  E-CompanyId:         <input type="text"  ng-model="user.CompanyId" /><br />
+  JobCategoryId:       <input type="text" ng-model="user.JobCategoryId" /><br />
+  NoOfPositions:       <input type="text" ng-model="user.NoOfPositions" /><br />
+  JobTitle:            <input type="text" ng-model="user.JobTitle"/><br />
+  WorkLocation:        <input type="text" ng-model="user.WorkLocation"><br>
+  JobDescription:      <input type="text" ng-model="user.JobDescription" /><br />
+  MinQualRequirements: <input type="text" ng-model="user.MinQualRequirements" /><br />
+  PreferredSkills:     <input type="text" ng-model="user.PreferredSkills"><br>
+  AdditionalInfo:      <input type="text" ng-model="user.AdditionalInfo" /><br />
+  PostingDate:         <input type="text" ng-model="user.PostingDate" /><br />
+  PostingUntil:        <input type="text" ng-model="user.PostingUntil"><br>
+  Salary:              <input type="text" ng-model="user.Salary">
+    <br>
+  <input type="submit" class="btn-success btn-group-lg" ng-click="save(user)" value="Save" />
+</pre>
+  </form>
+
+       </article>
+
+      </div>
+    </div>
+  </main>

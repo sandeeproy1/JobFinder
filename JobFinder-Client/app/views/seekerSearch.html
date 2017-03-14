@@ -1,0 +1,35 @@
+<ng-include src="'../views/Template/seekerHeader.html'" xmlns="http://www.w3.org/1999/html"
+            xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"> </ng-include>
+<main id="main">
+
+  <div class="container">
+
+    <div class="row topspace">
+
+      <!-- Sidebar -->
+      <ng-include src="'../views/Template/seekerleft.html'"> </ng-include>
+      <!-- /Sidebar -->
+
+
+      <article class="col-sm-8 col-md-8  col-lg-8 maincontent side2">
+        <select ng-model="src.JobCategoryId">
+          <option value=6 selected>Full Time</option>
+          <option value=3>PartTime</option>
+        </select>
+        <br>
+        <input type="text" placeholder="Company" ng-model="src.CompanyId"> </input>
+        <br>
+        <input type="text" placeholder="Job Title"  ng-model="src.JobTitle"> </input>
+        <button class="btn-success" ng-click="searchMe(src)">SEARCH</button>
+        <div ng-repeat="res in srcResult">
+          Job-ID: {{res.JobId}} | Title- {{res.JobTitle}} | <button class="btn-warning" ng-click="OneClickApply($index)">  Apply </button>
+        </div>
+      </article>
+
+
+    </div>
+
+  </div>	<!-- /container -->
+</main>
+
+

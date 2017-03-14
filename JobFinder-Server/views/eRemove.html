@@ -1,0 +1,75 @@
+<header id="header">
+  <div id="head">
+    <h1 id="logo" class="text-center">
+      <span class="title"> {{ }} Employeer name </span>
+			<span class="tagline"> {{ }}   A mystery person<br>
+				<a href="">{{ }} Employer email Id </a></span>
+    </h1>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+
+      <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="profile.html">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="sidebar-left.html">Left Sidebar</a></li>
+              <li><a href="sidebar-right.html">Right Sidebar</a></li>
+              <li><a href="single.html">Blog Post</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</header>
+
+
+<main id="main">
+
+  <div class="container">
+
+    <div class="row topspace">
+
+      <!-- Sidebar -->
+      <ng-include src="'../views/Template/employerLeft.html'"> </ng-include>
+      <!-- /Sidebar -->
+
+
+      <article class="col-sm-8 col-md-8  col-lg-8 maincontent side2" ng-show="showList">
+
+        <div ng-repeat="x in PostedJobs">
+
+          <div class="col-sm-8 col-md-8 col-lg-8 ngRow">
+            JOB-ID :{{x.JobId}}  TITLE: {{x.JobTitle}} | <button ng-click="fun1($index)"> Remove</button>
+          </div>
+        </div>
+
+      </article>
+
+      <h3> Description </h3>
+
+      <div ng-show="!showList" class="side2">
+        <div ng-repeat="para in jobDescArray">
+          {{para}}
+        </div>
+        <button ng-click="remove()"> Delete  </button>
+      </div>
+
+
+
+    </div>
+
+  </div>	<!-- /container -->
+</main>

@@ -1,0 +1,13 @@
+<div>
+  ----
+  <div ng-repeat="x in jobs">
+    {{$index}} {{x.job}} <button ng-click="fun1($index)"> see Job </button>
+  </div>
+  ---------------------------------------------
+  <div>
+    Job number : {{number}} <br>
+    job desc :  {{JobDesc}} <br>
+    <button ng-click="apply(number)"> Apply </button>
+  </div>
+
+</div>

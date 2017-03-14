@@ -1,0 +1,84 @@
+
+<header id="header">
+  <div id="head">
+    <h1 id="logo" class="text-center">
+      <span class="title"> {{ }} Employeer name </span>
+			<span class="tagline"> {{ }}   A mystery person<br>
+				<a href="">{{ }} Employer email Id </a></span>
+    </h1>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+
+      <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="profile.html">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="sidebar-left.html">Left Sidebar</a></li>
+              <li><a href="sidebar-right.html">Right Sidebar</a></li>
+              <li><a href="single.html">Blog Post</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</header>
+
+
+<main id="main">
+
+  <div class="container">
+
+    <div class="row topspace">
+
+      <!-- Sidebar -->
+      <ng-include src="'../views/Template/employerLeft.html'"> </ng-include>
+      <!-- /Sidebar -->
+
+
+      <article class="col-sm-8 col-md-8  col-lg-8 maincontent side2">
+        <form>
+          User-ID : <input type="text" ng-model="candidate.userId" /> <br>
+          Email :  <input type="text" ng-model="candidate.email" /> <br>
+          First Name : <input type="text" ng-model="candidate.firstName" /> <br>
+          Last Name : <input type="text" ng-model="candidate.lastName" /> <br>
+          Gender : <input type="text" ng-model="candidate.gender" /> <br>
+          Degree : <input type="text" ng-model="candidate.degree" /> <br>
+          Skills : <input type="text" ng-model="candidate.skills" /> <br>
+          Experience : <input type="text" ng-model="candidate.experience" /> <br>
+          Phone : <input type="text" ng-model="candidate.phone" /> <br>
+          <button class="btn-success btn-group-lg" ng-click="searchCandidate(candidate)"> SEARCH </button> <br>
+          </form>
+
+
+
+        </form>
+        </article>
+      </div>
+    </div>
+  </main>
+UserId : 1
+Email : sandeeproy22@gmail.com
+FName : Sandeep
+LName : Roy
+Gender : Male
+DOB : 2000-02-06T08:00:00.000Z
+Address : Adress
+Phone : 123456789
+Skills : Skills
+Experience : 5 yrs in IT industry
+Resume : Resume
+DegreeDesc : Bachelors
+UserTypeDesc : JobSeeker

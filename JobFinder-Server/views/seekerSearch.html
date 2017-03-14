@@ -1,0 +1,32 @@
+<ng-include src="'../views/Template/seekerHeader.html'" xmlns="http://www.w3.org/1999/html"> </ng-include>
+<main id="main">
+
+  <div class="container">
+
+    <div class="row topspace">
+
+      <!-- Sidebar -->
+      <ng-include src="'../views/Template/seekerleft.html'"> </ng-include>
+      <!-- /Sidebar -->
+
+
+      <article class="col-sm-8 col-md-8  col-lg-8 maincontent side2">
+        <select>
+          <option value="volvo" selected>Full Time</option>
+          <option value="saab">PartTime</option>
+        </select>
+
+        <input type="text" id="Fld" ng-model="jobId"> </input>
+        <button class="btn-success" ng-click="searchMe(jobId)">SEARCH</button>
+        <div ng-repeat="res in result">
+           {{res}}
+        </div>
+      </article>
+
+
+    </div>
+
+  </div>	<!-- /container -->
+</main>
+
+

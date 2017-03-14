@@ -1,0 +1,85 @@
+
+<header id="header">
+  <div id="head">
+    <h1 id="logo" class="text-center">
+      <span class="title"> {{ }} sandeeproy22@gmail.com</span>
+			<span class="tagline"> {{ }}  <button class="btn-danger" href="#/login"> <a href="/#/login"> signout </a></button> <br>
+				<a href="">{{ }}</a></span>
+    </h1>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+
+      <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="profile.html">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="sidebar-left.html">Left Sidebar</a></li>
+              <li><a href="sidebar-right.html">Right Sidebar</a></li>
+              <li><a href="single.html">Blog Post</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</header>
+
+
+<main id="main">
+
+  <div class="container">
+
+    <div class="row topspace">
+
+      <!-- Sidebar -->
+      <aside class="col-sm-4 sidebar sidebar-right">
+
+        <ul class="nav text-right nav-side">
+          <li ng-class="{active:window == 'main'}"><a href="#ui">Job Listing </a></li>
+          <li ng-class="{active:window == 'applied'}"><a ng-href="/#/Applications">Applied Jobs </a></li>
+          <li ng-class="{active:window == 'profile'}"><a href="/#/profile">My Profile</a></li>
+          <li ng-class="{active:window == 'search'}"><a href="/#/search"> Advance Search</a></li>
+        </ul>
+
+      </aside>
+      <!-- /Sidebar -->
+
+
+      <article class="col-sm-8 col-md-8  col-lg-8 maincontent side2" ng-show="showList">
+      <div>
+        <div ng-repeat="x in jobs">
+         <div class="col-sm-8 col-md-8 col-lg-8 ngRow"> {{$index}}.{{x.JobId}} {{x.JobTitle}}  </div> <button class="btn-warning" ng-click="fun1($index)"> see Job </button>
+        </div>
+      </div>
+
+        <!--- -->
+      </article>
+      <h3> Description </h3>
+      <div ng-show="!showList" class="side2">
+        <div ng-repeat="para in jobDescArray">
+          {{para}}
+        </div>
+        <button class="btn-success"  ng-click="apply(number)"> Apply </button>
+      </div>
+
+
+
+    </div>
+
+  </div>	<!-- /container -->
+</main>
+
+
+
